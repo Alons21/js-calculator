@@ -1,0 +1,68 @@
+@font-face {
+  font-family: 'CalculatorFont';
+  src:  url('./Calculator.ttf') format('truetype'); 
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#calculator-container {
+  margin-top: 100px;
+  background-color: rgb(255, 205, 106);
+  padding: 16px;
+  width: 350px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 
+  "header header header"
+  "clear clear equals"
+  "num num num"
+  "num num num"
+  "num num num"
+  "zero zero dot"
+  "operator operator operator";
+  border-radius: 4px;
+}
+button {
+  margin: 3px;
+  font-family: 'CalculatorFont';
+  padding: 10px;
+  font-size: 32px;
+  background: white;
+  border-radius: 6px;
+  transition: ease 0.2s;
+}
+button:hover {
+  background: rgb(106, 255, 205);
+}
+#display {
+  margin: 3px;
+  padding: 16px;
+  font-family: 'CalculatorFont';
+  font-size: 32px;
+  grid-area: header;
+  background: rgb(233, 233, 233);
+  border-radius: 4px;
+}
+#clear {
+  grid-area: clear;
+}
+#zero {
+  grid-area: zero;
+}
+#operator-container {
+  grid-area: operator;
+  display: flex;
+}
+#operator-container button {
+  width: 25%;
+  background-color: rgb(205, 106, 255);
+}
+#operator-container button:hover {
+  width: 25%;
+  background-color: rgb(219, 148, 255);
+}
+#author {
+  font-style: italic;
+}
